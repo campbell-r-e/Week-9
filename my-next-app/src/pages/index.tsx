@@ -24,7 +24,7 @@ export default function Home() {
             ))}
           </ul>
         ) : (
-          <p>Loading...</p>
+          <p>Loading</p>
         )}
       </div>
 // above from online resource

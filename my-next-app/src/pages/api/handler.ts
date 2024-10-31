@@ -8,7 +8,7 @@ export async function queryvideo() {
  
   try {
     const {rows} =
-      await client.sql`SELECT * FROM Video`;
+      await client.sql`SELECT * FROM "Video"`;
       return rows;
   } finally {
     await client.end();

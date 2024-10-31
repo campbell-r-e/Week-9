@@ -2,7 +2,8 @@ import { createClient } from '@vercel/postgres';
 
  
 export async function queryvideo() {
-  const client = createClient();
+  const connectionString = "postgres://default:RkmTvCKx9h3L@ep-curly-block-a4vx6vd3.us-east-1.aws.neon.tech/verceldb?sslmode=require";
+  const client = createClient({connectionString});
   await client.connect();
  
   try {

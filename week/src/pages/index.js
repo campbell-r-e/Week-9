@@ -50,7 +50,7 @@ export default function Home() {
       <div>
         <img src='./image.jpg' alt="radio" />
         <img src='./j.jpg' alt="radio" />
-        <img src='./radio.jpg' alt="radio" />
+        <img src='./w.jpg' alt="radio" />
       </div>
     </div>
   );

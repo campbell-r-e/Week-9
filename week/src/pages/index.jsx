@@ -29,6 +29,9 @@ export default function Home() {
 
   return (
     <div>
+      <a className="bg-red-800" href="./pics/pics">photos</a>
+
+      <div className='text-center color '>
       <h1>Video List</h1>
       <br />
       {error ? (
@@ -37,7 +40,7 @@ export default function Home() {
         <ul>
           {data.map((video) => (
             <li key={video.id}>
-              <h2>{video.name}</h2> {/* Display the video name */}
+              <h2>{video.name}</h2> {}
               
             </li>
           ))}
@@ -45,14 +48,11 @@ export default function Home() {
       ) : (
        null
       )}
-
-      <h1>Photos</h1>
-      <div>
-        <img src='./image.jpg' alt="radio" />
-        <img src='./j.jpg' alt="radio" />
-        <img src='./w.jpg' alt="radio" />
       </div>
+
+    
+      
     </div>
   );
 }
-// modified from online resource.
+

@@ -31,7 +31,7 @@ export default function Home() {
     <div>
       <a className="bg-red-800" href="./pics/pics">photos</a>
 
-      <div className='text-center color '>
+      <div className='text-center text-cyan-700'>
       <h1>Video List</h1>
       <br />
       {error ? (

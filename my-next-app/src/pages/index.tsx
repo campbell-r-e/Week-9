@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
-import { queryvideo } from '../pages/api/handler';
+import {useEffect, useState } from 'react';
+
+
 
 
 
@@ -12,14 +13,23 @@ interface Video {
   votes: number;
   length: number;
 }
+//
+async function fetchData() {
+  const response = await fetch('/api/handler');
+  const data = await response.json();
+  return data;
+}
+// from online resource 
+
 
 export default function Home() {
-
+  
     const [videos, setVideos] = useState<Video[]>([]);
+    
     
     useEffect(() => {
       async function fetchVideos() {
-        const videoData = await queryvideo();
+        const videoData = await fetchData();
         const mappedVideos: Video[] = videoData.map((video) => ({
           id: video.id,
           name: video.name,
@@ -39,6 +49,7 @@ export default function Home() {
         //
         <div>
         <h1>Video List</h1>
+        <br></br>
         {videos.length > 0 ? (
           <ul>
             {videos.map((video) => (
@@ -46,8 +57,17 @@ export default function Home() {
             ))}
           </ul>
         ) : (
-          <p>Loading</p>
+          null
         )}
+
+        <h1>Photos</h1>
+        <div>
+        <img src = './image.jpg' alt="radio"/>
+        <img src = './j.jpg' alt="radio"/>
+        <img src = './radio.jpg' alt="radio"/>
+
+        </div>
+       
       </div>
 // above from online resource
 
